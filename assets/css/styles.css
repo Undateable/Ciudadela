@@ -51,7 +51,7 @@ body {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .nav-container {
@@ -74,9 +74,9 @@ body {
 }
 
 .nav-logo img {
-    height: 130px;
+    height: 100px;
     width: auto;
-    max-width: 500px;
+    max-width: 420px;
     transition: all 0.3s ease;
     filter: brightness(1);
 }
@@ -142,6 +142,7 @@ body {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-secondary) 50%, var(--dark-bg) 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 140px;
 }
 
 .hero::before {
@@ -1545,7 +1546,268 @@ body {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
+/* Media Query para pantallas de 1024px (tablets landscape) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 940px;
+        padding: 0 25px;
+    }
+
+    .nav-container {
+        max-width: 940px;
+        padding: 0 25px;
+    }
+
+    .nav-logo img {
+        height: 105px;
+        max-width: 420px;
+    }
+
+    .nav-list {
+        gap: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 130px 0 3rem;
+    }
+
+    .hero-container {
+        max-width: 940px;
+        padding: 0 25px;
+        gap: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .hero-visual {
+        height: 420px;
+    }
+
+    .floating-card {
+        padding: 1.5rem;
+    }
+
+    .floating-card i {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 2.1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .games {
+        padding: 5rem 0;
+    }
+
+    .main-carousel {
+        max-width: 900px;
+    }
+
+    .game-showcase {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 1.8rem;
+    }
+
+    .game-details h3 {
+        font-size: 1.7rem;
+    }
+
+    .game-details p {
+        font-size: 1rem;
+    }
+
+    .carousel-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .prev-btn {
+        left: -22px;
+    }
+
+    .next-btn {
+        right: -22px;
+    }
+
+    .team {
+        padding: 5rem 0;
+    }
+
+    .contact {
+        padding: 5rem 0;
+    }
+
+    .contact-content {
+        max-width: 940px;
+        padding: 0 25px;
+        gap: 2.5rem;
+    }
+
+    .contact-info .section-title {
+        font-size: 2.1rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .member-card {
+        padding: 1.8rem;
+    }
+
+    .member-avatar {
+        width: 75px;
+        height: 75px;
+    }
+
+    .member-info h4 {
+        font-size: 1.35rem;
+    }
+
+    .member-role {
+        font-size: 0.95rem;
+    }
+
+    .member-description {
+        font-size: 0.9rem;
+    }
+
+    .company-card {
+        padding: 2.2rem;
+        gap: 1.5rem;
+    }
+
+    .company-icon {
+        font-size: 2.5rem;
+        min-width: 70px;
+    }
+
+    .company-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .company-content p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.8rem;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 2rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-header i {
+        font-size: 1.8rem;
+    }
+
+    .mission-card p,
+    .vision-card p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .team-stats {
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        padding: 1.8rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+    }
+
+    .value-item {
+        padding: 1.8rem;
+    }
+
+    .value-item i {
+        font-size: 2.2rem;
+    }
+
+    .value-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .value-item p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 11px 26px;
+        font-size: 0.95rem;
+    }
+
+    .download-btn {
+        padding: 0.7rem 1.1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Media Query para tablets portrait (769px - 900px) */
+@media (max-width: 900px) and (min-width: 769px) {
+    .hero-container {
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .game-showcase {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-content {
+        gap: 2rem;
+    }
+}
+
+/* Responsive Design para móviles y tablets pequeños */
 @media (max-width: 768px) {
     .mobile-bottom-nav {
         display: block;
@@ -1556,15 +1818,24 @@ body {
     }
     
     .games {
+        padding: 4rem 0;
         background-size: contain, 250px;
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .main-carousel {
+        border-radius: 15px;
     }
     
     .game-showcase {
         position: relative;
         grid-template-columns: 1fr;
         gap: 0;
-        padding: 3rem 2rem 2rem;
-        min-height: 400px;
+        padding: 2.5rem 1.8rem 1.8rem;
+        min-height: 420px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -1597,23 +1868,27 @@ body {
         position: relative;
         z-index: 2;
         padding: 0;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0,0,0,0.75);
+        border: 1px solid rgba(255,255,255,0.1);
         border-radius: 15px;
         padding: 1.5rem;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(12px);
     }
     
     .game-details h3 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         color: white;
         background: none;
         -webkit-text-fill-color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+        margin-bottom: 0.8rem;
     }
     
     .game-details p {
-        color: rgba(255,255,255,0.9);
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        color: rgba(255,255,255,0.95);
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
     
     .game-tags {
@@ -1636,19 +1911,29 @@ body {
         top: 1rem;
         right: 1rem;
         z-index: 3;
+        opacity: 1;
     }
     
     .download-btn {
-        background: rgba(6, 182, 212, 0.9);
+        background: rgba(6, 182, 212, 0.95);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(6, 182, 212, 0.6);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        border: 1px solid rgba(6, 182, 212, 0.7);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
     }
     
     .download-btn:hover {
         background: rgba(6, 182, 212, 1);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+    }
+    
+    .game-tag {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
+        background: rgba(139, 92, 246, 0.85);
+        border: 1px solid rgba(139, 92, 246, 0.6);
     }
     
     .nav-menu {
@@ -1668,18 +1953,6 @@ body {
     .nav-toggle {
         display: none !important;
     }
-
-    .nav-toggle.active .bar:nth-child(2) {
-        display: none;
-    }
-
-    .nav-toggle.active .bar:nth-child(1) {
-        display: none;
-    }
-
-    .nav-toggle.active .bar:nth-child(3) {
-        display: none;
-    }
     
     .header {
         background: rgba(10, 10, 10, 0.98);
@@ -1691,8 +1964,8 @@ body {
     }
     
     .nav-logo img {
-        height: 110px;
-        max-width: 400px;
+        height: 105px;
+        max-width: 380px;
     }
     
     .nav-container {
@@ -1700,18 +1973,49 @@ body {
         justify-content: center;
     }
 
+    .hero {
+        min-height: auto;
+        padding: 150px 0 3rem;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        padding: 0 1.5rem;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        letter-spacing: -1px;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
     }
 
     .hero-visual {
-        height: 300px;
+        height: 280px;
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .team {
+        padding: 4rem 0;
     }
 
     .contact {
@@ -1720,22 +2024,30 @@ body {
 
     .contact-content {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
         padding: 0 1.5rem;
     }
 
     .contact-info {
         padding-right: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .contact-info .section-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
         text-align: center;
+        margin-bottom: 1.5rem;
     }
 
     .about-section p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+        text-align: left;
     }
 
     .team-members {
@@ -1743,12 +2055,15 @@ body {
     }
 
     .team-members h3 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+        margin-bottom: 1.8rem;
     }
 
     .members-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .member-card {
@@ -1756,16 +2071,16 @@ body {
     }
 
     .member-avatar {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .member-avatar i {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .member-info h4 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
 
     .member-role {
@@ -1773,27 +2088,61 @@ body {
     }
 
     .member-description {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .cta-section h4 {
+        font-size: 1.3rem;
+    }
+
+    .cta-section p {
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 2.5rem 0 1rem;
     }
 
     .footer-content {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.8rem;
         text-align: center;
+    }
+
+    .footer-logo h3 {
+        font-size: 1.3rem;
     }
 
     .footer-links {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
     }
 
     .company-card {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
     }
     
     .company-icon {
         min-width: auto;
+        font-size: 2.5rem;
+    }
+
+    .company-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .company-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
     
     .mission-vision {
@@ -1804,7 +2153,25 @@ body {
     .mission-card,
     .vision-card,
     .values-card {
-        padding: 2rem;
+        padding: 1.8rem;
+    }
+
+    .card-header {
+        margin-bottom: 1rem;
+    }
+
+    .card-header i {
+        font-size: 1.8rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .mission-card p,
+    .vision-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
     
     .values-grid {
@@ -1814,11 +2181,23 @@ body {
 
     .values-section .values-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
 
     .values-section .value-item {
-        padding: 1.5rem;
+        padding: 1.3rem;
+    }
+
+    .values-section .value-item i {
+        font-size: 2rem;
+    }
+
+    .values-section .value-item span {
+        font-size: 1rem;
+    }
+
+    .values-header {
+        margin-bottom: 2rem;
     }
 
     .values-header i {
@@ -1827,6 +2206,24 @@ body {
 
     .values-header h3 {
         font-size: 1.5rem;
+    }
+
+    .team-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
     }
 
     .company-card {
@@ -2003,23 +2400,60 @@ body {
     }
 }
 
-/* Estilos para pantallas muy pequeñas */
+/* Estilos para pantallas muy pequeñas (320px) */
 @media (max-width: 320px) {
-    .contact-content {
-        padding: 0 0.5rem;
+    .nav-logo img {
+        height: 85px;
+        max-width: 300px;
     }
 
-    .contact-info .section-title {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .hero {
+        padding: 125px 0 2.5rem;
+    }
+
+    .section-title {
         font-size: 1.6rem;
     }
 
+    .section-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .contact-content {
+        padding: 0 0.8rem;
+    }
+
+    .contact-info .section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 0.85rem;
+    }
+
     .team-members {
-        padding: 1rem 0.5rem;
+        padding: 1.5rem 0.8rem;
+    }
+
+    .team-members h3 {
+        font-size: 1.4rem;
+    }
+
+    .members-grid {
+        max-width: 100%;
     }
 
     .member-card {
-        max-width: 280px;
-        padding: 1.2rem;
+        max-width: 100%;
+        padding: 1.3rem;
     }
 
     .member-avatar {
@@ -2027,31 +2461,190 @@ body {
         height: 60px;
     }
 
+    .member-avatar i {
+        font-size: 1.5rem;
+    }
+
     .member-info h4 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+    }
+
+    .member-role {
+        font-size: 0.85rem;
+    }
+
+    .member-description {
+        font-size: 0.78rem;
     }
 
     .skill-tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.5rem;
+        font-size: 0.68rem;
+        padding: 0.22rem 0.5rem;
+    }
+
+    .game-showcase {
+        padding: 1.8rem 1.2rem 1.2rem;
+        min-height: 350px;
+    }
+
+    .game-details {
+        padding: 1.1rem;
+    }
+
+    .game-details h3 {
+        font-size: 1.35rem;
+    }
+
+    .game-details p {
+        font-size: 0.85rem;
+    }
+
+    .game-tag {
+        font-size: 0.65rem;
+        padding: 0.28rem 0.6rem;
+    }
+
+    .download-btn {
+        padding: 0.55rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .carousel-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .prev-btn {
+        left: -16px;
+    }
+
+    .next-btn {
+        right: -16px;
+    }
+
+    .btn {
+        max-width: 100%;
+        padding: 9px 20px;
+        font-size: 0.85rem;
+    }
+
+    .company-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .company-icon {
+        font-size: 2rem;
+    }
+
+    .company-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .company-content p {
+        font-size: 0.85rem;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 1.3rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .mission-card p,
+    .vision-card p {
+        font-size: 0.85rem;
+    }
+
+    .bottom-nav-item {
+        min-width: 50px;
+    }
+
+    .bottom-nav-item i {
+        font-size: 1rem;
+    }
+
+    .bottom-nav-item span {
+        font-size: 0.6rem;
+    }
+
+    .mobile-bottom-nav {
+        padding: 0.4rem 0;
+    }
+
+    .stat-item {
+        padding: 1.3rem 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .cta-section h4 {
+        font-size: 1.1rem;
+    }
+
+    .cta-section p {
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .games {
+        padding: 3.5rem 0;
         background-size: contain, 180px;
     }
     
-    .game-showcase {
-        padding: 1.5rem;
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
     }
     
+    .game-showcase {
+        padding: 2rem 1.5rem 1.5rem;
+        min-height: 380px;
+    }
+    
+    .game-details {
+        padding: 1.3rem;
+    }
+
     .game-details h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .game-details p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .game-tags {
+        gap: 0.4rem;
+        margin-top: 0.8rem;
+    }
+
+    .game-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.65rem;
     }
     
     .carousel-indicators {
-        gap: 0.8rem;
+        gap: 0.7rem;
         margin-top: 1.5rem;
     }
     
@@ -2061,39 +2654,58 @@ body {
     }
     
     .carousel-nav {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
     }
     
     .prev-btn {
-        left: -15px;
+        left: -18px;
     }
     
     .next-btn {
-        right: -15px;
+        right: -18px;
     }
     
-    .hero-title {
-        font-size: 2rem;
+    .hero {
+        padding: 135px 0 2.5rem;
     }
 
-    .section-title {
+    .hero-title {
         font-size: 2rem;
+        line-height: 1.15;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.8rem;
     }
 
     .btn {
         width: 100%;
-        max-width: 250px;
+        max-width: 280px;
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .download-btn {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .download-overlay {
+        top: 0.8rem;
+        right: 0.8rem;
     }
 
     .team-stats {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .values-section .values-grid {
@@ -2102,7 +2714,7 @@ body {
     }
 
     .values-section .value-item {
-        padding: 1rem;
+        padding: 1.2rem;
     }
 
     .values-header {
@@ -2124,6 +2736,130 @@ body {
 
     .values-section .value-item span {
         font-size: 1rem;
+    }
+
+    .nav-logo img {
+        height: 95px;
+        max-width: 340px;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .contact-content {
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+
+    .contact-info .section-title {
+        font-size: 1.7rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .contact-item i {
+        font-size: 1.3rem;
+    }
+
+    .team-members h3 {
+        font-size: 1.6rem;
+    }
+
+    .members-grid {
+        gap: 1.5rem;
+    }
+
+    .member-card {
+        padding: 1.5rem;
+    }
+
+    .member-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .member-avatar i {
+        font-size: 1.7rem;
+    }
+
+    .member-info h4 {
+        font-size: 1.25rem;
+    }
+
+    .member-role {
+        font-size: 0.9rem;
+    }
+
+    .member-description {
+        font-size: 0.82rem;
+    }
+
+    .skill-tag {
+        font-size: 0.72rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .company-card {
+        padding: 1.8rem 1.3rem;
+    }
+
+    .company-icon {
+        font-size: 2.3rem;
+    }
+
+    .company-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .company-content p {
+        font-size: 0.9rem;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 1.5rem;
+    }
+
+    .card-header i {
+        font-size: 1.6rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.15rem;
+    }
+
+    .mission-card p,
+    .vision-card p {
+        font-size: 0.9rem;
+    }
+
+    .cta-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .bottom-nav-item {
+        min-width: 55px;
+        padding: 0.4rem;
+    }
+
+    .bottom-nav-item i {
+        font-size: 1.1rem;
+    }
+
+    .bottom-nav-item span {
+        font-size: 0.65rem;
     }
 
     .game-showcase {
