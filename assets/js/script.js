@@ -302,10 +302,24 @@ function typeWriter(element, text, speed = 100) {
 window.addEventListener('load', function() {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
+        // Guardar el HTML original para preservar las clases
+        const originalHTML = heroTitle.innerHTML;
+        
+        // Desactivar la animación de escritura y mantener el HTML original con clases
+        // para que el efecto .highlight funcione correctamente
+        // setTimeout(() => {
+        //     typeWriter(heroTitle, heroTitle.textContent, 50);
+        // }, 1000);
+        
+        // Aplicar una animación de fade-in suave en su lugar
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transform = 'translateY(20px)';
+        
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 1000);
+            heroTitle.style.transition = 'all 1s ease-out';
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+        }, 300);
     }
 });
 
