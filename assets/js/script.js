@@ -1,3 +1,18 @@
+// Preloader
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    // Esperar 2 segundos antes de ocultar el preloader
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+        
+        // Remover el preloader del DOM después de la animación
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    }, 2000);
+});
+
 // Navegación móvil
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('nav-toggle');
