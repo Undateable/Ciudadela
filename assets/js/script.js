@@ -114,26 +114,7 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Animación de números en la sección de estadísticas
-function animateNumbers() {
-    const numbers = document.querySelectorAll('.stat-number');
-    
-    numbers.forEach(number => {
-        const target = parseInt(number.getAttribute('data-target'));
-        const increment = target / 100;
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            number.textContent = Math.floor(current);
-            
-            if (current >= target) {
-                number.textContent = target;
-                clearInterval(timer);
-            }
-        }, 20);
-    });
-}
+
 
 // Intersection Observer para animaciones
 const observerOptions = {
@@ -145,18 +126,13 @@ const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
-            
-            // Animar números cuando la sección sea visible
-            if (entry.target.classList.contains('team-stats')) {
-                animateNumbers();
-            }
         }
     });
 }, observerOptions);
 
 // Observar elementos para animaciones
 document.addEventListener('DOMContentLoaded', function() {
-    const elementsToAnimate = document.querySelectorAll('.expertise-card, .team-stats, .value-item, .contact-item');
+    const elementsToAnimate = document.querySelectorAll('.contact-item');
     
     elementsToAnimate.forEach(element => {
         observer.observe(element);
@@ -297,36 +273,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Animación de escritura para el título principal
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
 
-// Inicializar animación de escritura cuando se carga la página
+
+// Inicializar animación de fade-in para el título principal
 window.addEventListener('load', function() {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        // Guardar el HTML original para preservar las clases
-        const originalHTML = heroTitle.innerHTML;
-        
-        // Desactivar la animación de escritura y mantener el HTML original con clases
-        // para que el efecto .highlight funcione correctamente
-        // setTimeout(() => {
-        //     typeWriter(heroTitle, heroTitle.textContent, 50);
-        // }, 1000);
-        
-        // Aplicar una animación de fade-in suave en su lugar
+        // Aplicar una animación de fade-in suave preservando el HTML y clases
         heroTitle.style.opacity = '0';
         heroTitle.style.transform = 'translateY(20px)';
         

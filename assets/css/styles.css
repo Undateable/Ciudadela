@@ -691,58 +691,6 @@ body {
     transform: scale(1.05);
 }
 
-.card-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.5));
-    transition: all 0.3s ease;
-}
-
-.expertise-card:hover .card-icon {
-    color: var(--accent-color);
-    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.6));
-    transform: scale(1.1);
-}
-
-.expertise-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
-
-.expertise-card p {
-    color: #cccccc;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.tech-tag {
-    background: rgba(139, 92, 246, 0.15);
-    color: var(--violet-light);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-    background: rgba(6, 182, 212, 0.2);
-    color: var(--accent-color);
-    border-color: rgba(6, 182, 212, 0.4);
-    transform: scale(1.05);
-}
-
 /* Team Section */
 .team {
     padding: 6rem 0;
@@ -760,38 +708,6 @@ body {
     background: 
         radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.04) 0%, transparent 70%);
     pointer-events: none;
-}
-
-.team-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.stat-label {
-    color: #cccccc;
-    font-weight: 500;
 }
 
 .team-values {
@@ -852,8 +768,7 @@ body {
 }
 
 .mission-card,
-.vision-card,
-.values-card {
+.vision-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -865,8 +780,7 @@ body {
 }
 
 .mission-card:hover,
-.vision-card:hover,
-.values-card:hover {
+.vision-card:hover {
     background: rgba(255, 255, 255, 0.08);
     transform: translateY(-5px);
     border-color: var(--color-accent);
@@ -900,135 +814,7 @@ body {
     margin: 0;
 }
 
-/* Values Grid */
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
 
-.values-card .value-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    text-align: left;
-}
-
-.values-card .value-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-}
-
-.values-card .value-item i {
-    font-size: 1.5rem;
-    color: var(--color-accent);
-    min-width: 25px;
-}
-
-.values-card .value-item span {
-    font-weight: 600;
-    color: white;
-}
-
-/* Values Section Independent */
-.values-section {
-    margin-top: 4rem;
-    text-align: center;
-}
-
-.values-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
-
-.values-header i {
-    font-size: 2.5rem;
-    color: var(--color-accent);
-}
-
-.values-header h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-}
-
-.values-section .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.values-section .value-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.values-section .value-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-10px);
-    border-color: var(--color-accent);
-    box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
-}
-
-.values-section .value-item i {
-    font-size: 2.5rem;
-    color: var(--color-accent);
-}
-
-.values-section .value-item span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-}
-
-.value-item {
-    text-align: center;
-    padding: 2rem;
-}
-
-.value-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
-    transition: all 0.3s ease;
-}
-
-.value-item:hover i {
-    color: var(--accent-color);
-    filter: drop-shadow(0 0 25px rgba(6, 182, 212, 0.7));
-    transform: scale(1.1) rotate(5deg);
-}
-
-.value-item h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.value-item p {
-    color: #cccccc;
-    line-height: 1.6;
-}
 
 /* Contact Section */
 .contact {
@@ -2139,8 +1925,7 @@ body {
     }
     
     .mission-card,
-    .vision-card,
-    .values-card {
+    .vision-card {
         padding: 1.8rem;
     }
 
@@ -2160,28 +1945,6 @@ body {
     .vision-card p {
         font-size: 0.95rem;
         line-height: 1.6;
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .values-section .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
-    }
-
-    .values-section .value-item {
-        padding: 1.3rem;
-    }
-
-    .values-section .value-item i {
-        font-size: 2rem;
-    }
-
-    .values-section .value-item span {
-        font-size: 1rem;
     }
 
     .values-header {
