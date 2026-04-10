@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Ciudadela Game Studios crea videojuegos narrativos donde la historia y la jugabilidad construyen mundos memorables.">
+    <meta name="theme-color" content="#101a24">
     <title>La Ciudadela Game Studios</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Preloader -->
@@ -25,25 +29,25 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="./assets/img/logo_nav.png" alt="">
+                    <img src="./assets/img/logo_nav.png" alt="La Ciudadela Game Studios">
                 </div>
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link">HOME</a>
+                            <a href="#home" class="nav-link">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#expertise" class="nav-link">GAMES</a>
+                            <a href="#expertise" class="nav-link">JUEGOS</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#team" class="nav-link">ABOUT</a>
+                            <a href="#team" class="nav-link">ESTUDIO</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link">CONTACT</a>
+                            <a href="#contact" class="nav-link">CONTACTO</a>
                         </li>
                     </ul>
                 </div>
-                <div class="nav-toggle" id="nav-toggle">
+                <div class="nav-toggle" id="nav-toggle" aria-hidden="true">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -56,35 +60,50 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
+                <p class="eyebrow">Estudio indie de videojuegos narrativos</p>
                 <h1 class="hero-title">
                     Más que juegos,<br>
                     <span class="highlight">un hogar para tus historias</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Ser un estudio referente en la creación de videojuegos donde la narrativa y la jugabilidad se fusionen, brindando experiencias únicas que conecten con jugadores de todo el mundo.
+                    Diseñamos videojuegos donde la narrativa marca el pulso del recorrido. Buscamos mundos con personalidad, mecánicas con intención y experiencias que permanezcan en la memoria del jugador.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('expertise')">
+                    <button class="btn btn-primary" type="button" onclick="scrollToSection('expertise')" data-track="cta-juegos">
                         Nuestros Juegos
                     </button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
-                        Contactanos
+                    <button class="btn btn-secondary" type="button" onclick="scrollToSection('contact')" data-track="cta-contacto-hero">
+                        Contáctanos
                     </button>
+                </div>
+                <div class="hero-stats" aria-label="Fortalezas del estudio">
+                    <div class="hero-stat">
+                        <strong>3</strong>
+                        <span>juegos publicados</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>2020</strong>
+                        <span>desde nuestro inicio</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>100%</strong>
+                        <span>foco en narrativa</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="floating-elements">
                     <div class="floating-card card-1">
-                        <i class="fas fa-code"></i>
-                        <span>Development</span>
+                        <i class="fas fa-feather-pointed"></i>
+                        <span>Narrativa</span>
                     </div>
                     <div class="floating-card card-2">
-                        <i class="fas fa-paint-brush"></i>
-                        <span>Design</span>
+                        <i class="fas fa-gamepad"></i>
+                        <span>Gameplay</span>
                     </div>
                     <div class="floating-card card-3">
-                        <i class="fas fa-lightbulb"></i>
-                        <span>Innovation</span>
+                        <i class="fas fa-globe"></i>
+                        <span>Mundos</span>
                     </div>
                 </div>
             </div>
@@ -97,7 +116,7 @@
             <div class="section-header">
                 <h2 class="section-title">NUESTROS JUEGOS</h2>
                 <p class="section-subtitle">
-                    Descubre los mundos épicos que hemos creado para ti
+                    Un catálogo indie donde cada proyecto intenta construir tono, identidad y una forma propia de jugar.
                 </p>
             </div>
             <!-- Carrusel Principal de Juegos -->
@@ -109,7 +128,7 @@
                             <div class="game-image">
                                 <img src="./assets/img_game/box_boy.png" alt="Box Boy">
                                 <div class="download-overlay">
-                                    <a href="https://dannette.itch.io/box-boy" class="download-btn" onclick="downloadGame('box_boy')">
+                                    <a href="https://dannette.itch.io/box-boy" class="download-btn" target="_blank" rel="noreferrer noopener" aria-label="Abrir Box Boy en itch.io" data-track="game-box-boy">
                                         <i class="fas fa-download"></i>
                                         <span>Descargar</span>
                                     </a>
@@ -133,7 +152,7 @@
                             <div class="game-image">
                                 <img src="./assets/img_game/gaucho_runner.png" alt="Gaucho Runner">
                                 <div class="download-overlay">
-                                    <a href="https://jerestein-dev.itch.io/gaucho-runner" class="download-btn" onclick="downloadGame('gaucho_runner')">
+                                    <a href="https://jerestein-dev.itch.io/gaucho-runner" class="download-btn" target="_blank" rel="noreferrer noopener" aria-label="Abrir Gaucho Runner en itch.io" data-track="game-gaucho-runner">
                                         <i class="fas fa-download"></i>
                                         <span>Descargar</span>
                                     </a>
@@ -157,7 +176,7 @@
                             <div class="game-image">
                                 <img src="./assets/img_game/ruinas_de_skersher.png" alt="Ruinas de Skersher">
                                 <div class="download-overlay">
-                                    <a href="https://dannette.itch.io/ruinas-de-skersher" class="download-btn" onclick="downloadGame('ruinas_skersher')">
+                                    <a href="https://dannette.itch.io/ruinas-de-skersher" class="download-btn" target="_blank" rel="noreferrer noopener" aria-label="Jugar Ruinas de Skersher online" data-track="game-ruinas-skersher">
                                         <i class="fas fa-external-link-alt"></i>
                                         <span>Jugar Online</span>
                                     </a>
@@ -179,18 +198,86 @@
                 </div>
 
                 <!-- Controles del carrusel -->
-                <button class="carousel-nav prev-btn" onclick="changeMainSlide(-1)">
+                <button class="carousel-nav prev-btn" type="button" onclick="changeMainSlide(-1)" aria-label="Juego anterior">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <button class="carousel-nav next-btn" onclick="changeMainSlide(1)">
+                <button class="carousel-nav next-btn" type="button" onclick="changeMainSlide(1)" aria-label="Juego siguiente">
                     <i class="fas fa-chevron-right"></i>
                 </button>
 
                 <!-- Indicadores (puntitos) -->
                 <div class="carousel-indicators">
-                    <button class="indicator active" onclick="goToSlide(0)" data-slide="0"></button>
-                    <button class="indicator" onclick="goToSlide(1)" data-slide="1"></button>
-                    <button class="indicator" onclick="goToSlide(2)" data-slide="2"></button>
+                    <button class="indicator active" type="button" onclick="goToSlide(0)" data-slide="0" aria-label="Ir al juego 1"></button>
+                    <button class="indicator" type="button" onclick="goToSlide(1)" data-slide="1" aria-label="Ir al juego 2"></button>
+                    <button class="indicator" type="button" onclick="goToSlide(2)" data-slide="2" aria-label="Ir al juego 3"></button>
+                </div>
+            </div>
+            <div class="catalog-section">
+                <div class="catalog-header">
+                    <h3>Explora el catálogo</h3>
+                    <p>Una vista rápida del universo creativo de La Ciudadela, con proyectos publicados y otros títulos que forman parte de nuestro recorrido.</p>
+                </div>
+                <div class="catalog-grid">
+                    <article class="catalog-card">
+                        <img src="./assets/img_game/box_boy.png" alt="Arte de Box Boy" class="lightbox-trigger" data-fullsrc="./assets/img_game/box_boy.png" data-caption="Box Boy">
+                        <div class="catalog-card-content">
+                            <div class="catalog-meta">
+                                <span class="catalog-badge">Publicado</span>
+                                <span>Plataformas</span>
+                            </div>
+                            <h4>Box Boy</h4>
+                            <p>Desafíos de precisión, puzzle y movimiento en un mundo compacto y expresivo.</p>
+                            <a href="https://dannette.itch.io/box-boy" target="_blank" rel="noreferrer noopener" data-track="catalog-box-boy">Ver en itch.io</a>
+                        </div>
+                    </article>
+                    <article class="catalog-card">
+                        <img src="./assets/img_game/gaucho_runner.png" alt="Arte de Gaucho Runner" class="lightbox-trigger" data-fullsrc="./assets/img_game/gaucho_runner.png" data-caption="Gaucho Runner">
+                        <div class="catalog-card-content">
+                            <div class="catalog-meta">
+                                <span class="catalog-badge">Publicado</span>
+                                <span>Arcade</span>
+                            </div>
+                            <h4>Gaucho Runner</h4>
+                            <p>Velocidad, reflejos y una identidad local clara en formato endless runner.</p>
+                            <a href="https://jerestein-dev.itch.io/gaucho-runner" target="_blank" rel="noreferrer noopener" data-track="catalog-gaucho-runner">Ver en itch.io</a>
+                        </div>
+                    </article>
+                    <article class="catalog-card">
+                        <img src="./assets/img_game/ruinas_de_skersher.png" alt="Arte de Ruinas de Skersher" class="lightbox-trigger" data-fullsrc="./assets/img_game/ruinas_de_skersher.png" data-caption="Ruinas de Skersher">
+                        <div class="catalog-card-content">
+                            <div class="catalog-meta">
+                                <span class="catalog-badge">Publicado</span>
+                                <span>RPG</span>
+                            </div>
+                            <h4>Ruinas de Skersher</h4>
+                            <p>Exploración fantástica con foco en atmósfera, misterio y aventura.</p>
+                            <a href="https://dannette.itch.io/ruinas-de-skersher" target="_blank" rel="noreferrer noopener" data-track="catalog-ruinas-skersher">Jugar online</a>
+                        </div>
+                    </article>
+                    <article class="catalog-card">
+                        <img src="./assets/img_game/el_infierno_de_pawling.png" alt="Arte de El Infierno de Pawling" class="lightbox-trigger" data-fullsrc="./assets/img_game/el_infierno_de_pawling.png" data-caption="El Infierno de Pawling">
+                        <div class="catalog-card-content">
+                            <div class="catalog-meta">
+                                <span class="catalog-badge catalog-badge-muted">Archivo</span>
+                                <span>Narrativa</span>
+                            </div>
+                            <h4>El Infierno de Pawling</h4>
+                            <p>Una pieza del archivo creativo del estudio que amplía el tono y la identidad del catálogo.</p>
+                            <span class="catalog-note">Más información próximamente</span>
+                        </div>
+                    </article>
+                    <article class="catalog-card">
+                        <img src="./assets/img_game/the_nameless.png" alt="Arte de The Nameless" class="lightbox-trigger" data-fullsrc="./assets/img_game/the_nameless.png" data-caption="The Nameless">
+                        <div class="catalog-card-content">
+                            <div class="catalog-meta">
+                                <span class="catalog-badge catalog-badge-muted">Archivo</span>
+                                <span>Experimental</span>
+                            </div>
+                            <h4>The Nameless</h4>
+                            <p>Otro proyecto del universo Ciudadela que muestra exploración visual y búsqueda de tono propio.</p>
+                            <span class="catalog-note">Más información próximamente</span>
+                        </div>
+                    </article>
                 </div>
             </div>
     </section>
@@ -230,7 +317,17 @@
                     </div>
                     <p>Ser un estudio referente en la creación de videojuegos donde la narrativa y la jugabilidad se fusionen, brindando experiencias únicas que conecten con jugadores de todo el mundo.</p>
                 </div>
-
+                <div class="vision-card studio-pillars">
+                    <div class="card-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Nuestros Pilares</h3>
+                    </div>
+                    <ul class="pillar-list">
+                        <li>Historias con identidad propia.</li>
+                        <li>Mecánicas al servicio de la emoción.</li>
+                        <li>Producción indie con ambición creativa.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -245,21 +342,71 @@
                         <div class="about-section">
                             <p>Fundado en 2020, La Ciudadela Game Studios nace de la pasión por los videojuegos y la innovación tecnológica. Comenzamos como un pequeño equipo de desarrolladores independientes con el sueño de crear mundos virtuales que transporten a los jugadores a experiencias inolvidables.</p>
                         </div>
+                        <div class="story-timeline">
+                            <h3>Recorrido</h3>
+                            <div class="timeline-list">
+                                <div class="timeline-item">
+                                    <span class="timeline-year">2020</span>
+                                    <p>Nace el estudio con la intención de construir videojuegos donde la historia no sea un agregado, sino el centro de cada decisión.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">Proceso</span>
+                                    <p>El trabajo del equipo combina diseño, prototipado y búsqueda de identidad para desarrollar experiencias con personalidad propia.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-year">Hoy</span>
+                                    <p>La Ciudadela sigue creciendo con un catálogo que mezcla aventura, arcade y exploración narrativa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studio-stats" aria-label="Datos del estudio">
+                            <h3>En números</h3>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <div class="stat-info">
+                                        <h4>6+</h4>
+                                        <p>Años construyendo universo</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                                    <div class="stat-info">
+                                        <h4>3</h4>
+                                        <p>Proyectos publicados</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                                    <div class="stat-info">
+                                        <h4>2</h4>
+                                        <p>Perfiles clave del equipo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Contacto</h4>
-                                <p>laciudadelastudios@gmail.com</p>
+                                <p><a href="mailto:laciudadelastudios@gmail.com">laciudadelastudios@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Analítica básica</h4>
+                                <p>El sitio registra de forma local las interacciones clave para revisar clics y secciones visitadas sin enviar datos a servicios externos.</p>
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
                         <h4>SÍGUENOS</h4>
                         <div class="social-icons">
-                            <a href="https://www.tiktok.com/@laciudadelagamestudio" class="social-link">
+                            <a href="https://www.tiktok.com/@laciudadelagamestudio" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="TikTok de La Ciudadela Game Studios" data-track="social-tiktok">
                                 <i class="fab fa-tiktok"></i>
                             </a>
-                            <a href="https://www.youtube.com/@LaCiudadelaGameStudio" class="social-link">
+                            <a href="https://www.youtube.com/@LaCiudadelaGameStudio" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="Canal de YouTube de La Ciudadela Game Studios" data-track="social-youtube">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -267,6 +414,43 @@
                 </div>
                 <div class="team-members">
                     <h3>Nuestro Equipo</h3>
+                    <div class="collab-panel">
+                        <div class="collab-copy">
+                            <span class="eyebrow">Abierto a colaboraciones</span>
+                            <h4>Hablemos de juegos, ideas o alianzas</h4>
+                            <p>Si quieres seguir el trabajo del estudio, probar títulos o abrir una conversación profesional, aquí tienes los accesos directos más útiles.</p>
+                        </div>
+                        <div class="collab-actions">
+                            <a href="mailto:laciudadelastudios@gmail.com" class="btn btn-primary" data-track="cta-correo-panel">Enviar correo</a>
+                            <a href="#expertise" class="btn btn-secondary" data-track="cta-ver-juegos-panel">Ver juegos</a>
+                            <a href="https://www.tiktok.com/@laciudadelagamestudio" class="quick-link" target="_blank" rel="noreferrer noopener" data-track="panel-tiktok">TikTok</a>
+                            <a href="https://www.youtube.com/@LaCiudadelaGameStudio" class="quick-link" target="_blank" rel="noreferrer noopener" data-track="panel-youtube">YouTube</a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <h4>Escríbenos</h4>
+                        <p class="form-intro">Completa el formulario y abriremos tu cliente de correo con el mensaje listo para enviar al estudio.</p>
+                        <div class="form-group">
+                            <label for="contact-name">Nombre</label>
+                            <input id="contact-name" name="name" type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" name="email" type="email" placeholder="tuemail@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Asunto</label>
+                            <input id="contact-subject" name="subject" type="text" placeholder="Consulta, propuesta o colaboración" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Mensaje</label>
+                            <textarea id="contact-message" name="message" placeholder="Cuéntanos en qué podemos colaborar" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" data-track="contact-form-submit">Preparar correo</button>
+                            <p class="form-status" id="form-status" aria-live="polite"></p>
+                        </div>
+                    </form>
                     <div class="members-grid">
                         <div class="member-card">
                             <div class="member-avatar">
@@ -285,15 +469,16 @@
                         </div>
                         <div class="member-card">
                             <div class="member-avatar">
-                                <img src="./assets/img/jeremias_avatar.jpg" alt="Jeremías Ronco">
+                                <span class="member-initials" aria-hidden="true">JR</span>
                             </div>
                             <div class="member-info">
                                 <h4>Jeremías Ronco</h4>
                                 <p class="member-role">Game Developer</p>
-                                <p class="member-description">Encargado de desarrollo e implementación de mecánicas</p>
+                                <p class="member-description">Encargado del desarrollo, implementación de mecánicas y prototipado técnico.</p>
                                 <div class="member-skills">
                                     <span class="skill-tag">Developer</span>
                                     <span class="skill-tag">Programmer</span>
+                                    <span class="skill-tag">Systems</span>
                                 </div>
                             </div>
                         </div>
@@ -313,7 +498,7 @@
         <div class="bottom-nav-container">
             <a href="#home" class="bottom-nav-item active" data-section="home">
                 <i class="fas fa-home"></i>
-                <span>Home</span>
+                <span>Inicio</span>
             </a>
             <a href="#expertise" class="bottom-nav-item" data-section="expertise">
                 <i class="fas fa-gamepad"></i>
@@ -339,17 +524,25 @@
                     <p>Más que juegos, un hogar para tus historias</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#expertise">Game</a>
-                    <a href="#team">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home">Inicio</a>
+                    <a href="#expertise">Juegos</a>
+                    <a href="#team">Estudio</a>
+                    <a href="#contact">Contacto</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 La Ciudadela Game Studios. Todos los derechos reservados.</p>
+                <p>&copy; 2026 La Ciudadela Game Studios. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Cerrar imagen ampliada">&times;</button>
+        <figure class="lightbox-figure">
+            <img src="" alt="" id="lightbox-image">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
